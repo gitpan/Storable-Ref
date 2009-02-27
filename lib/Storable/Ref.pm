@@ -3,7 +3,7 @@ package Storable::Ref;
 use strict;
 use Storable;
 
-our $VERSION="1.0";
+our $VERSION="1.1";
 
 =head1 NAME
 
@@ -26,12 +26,12 @@ Storable::Ref - Persistent automatic variables vi Storable
   $ perl test.pl
   a=1 b=2
 
-Storable:Ref gets your reference to variable and remembers
+L<Storable::Ref> gets your reference to variable and remembers
 filename associated with this variable. When you construct
 this variable you provide to constructor default value 
 and fully qualified filename for storing this it.
 If L<Storable::Ref> finds this file and it contains valid
-Storable object, it uses this data to initialize variable
+L<Storable> object, it uses this data to initialize variable
 with this data instead of default value.
 
 this functionality my be used for storing state of
@@ -107,6 +107,8 @@ sub DESTROY {
 
 =head1 AUTHOR
 
-Vany Serezhkin L<ivan@serezhkin.com> 2009 Yandex.
+Vany Serezhkin <ivan@serezhkin.com> 2009 Yandex.
+
+=cut
 
 1;
